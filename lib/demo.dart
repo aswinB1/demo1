@@ -14,15 +14,30 @@ class Demo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
-        TextField(
-          decoration: InputDecoration(
-              label: Text("NAME"),
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
-          onChanged: (value) {
-            user = value;
-          },
-        )
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextField(
+            decoration: InputDecoration(
+                label: Text("NAME"),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
+            onChanged: (value) {
+              user = value;
+            },
+          ),
+        ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                    label: Text("PASSWORD"),
+                    border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
+                onChanged: (value) {
+                  user = value;
+                },
+              ),
+            )
       ]),
     );
   }
